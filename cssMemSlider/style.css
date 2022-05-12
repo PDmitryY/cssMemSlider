@@ -1,0 +1,134 @@
+html {
+    font-size: 10px;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto auto;
+    max-width: 95vw;
+    height: 95vh;
+    background-color: black;
+    border: solid 5px lightgrey;
+    border-radius: 5px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    margin: 5vh;
+}
+
+.slide.c1 {
+    background-image: url(./assets/Corvette-C1-1962.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c2 {
+    background-image: url(./assets/Corvette-C2-Coupe.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c3 {
+    background-image: url(./assets/Corvette-C3-Coupe.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c4 {
+    background-image: url(./assets/Corvette-C4-Cabrio.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c5 {
+    background-image: url(./assets/Corvette-C5-Coupe.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c6 {
+    background-image: url(./assets/Corvette-C6-Coupe.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c7 {
+    background-image: url(./assets/Corvette-C7.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.slide.c8 {
+    background-image: url(./assets/Corvette-C8.jpg);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-box {
+    width: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 0;
+}
+
+.text.active {
+    font-size: 2rem;
+}
+
+.switchers {
+    display: flex;
+}
+
+.switcher {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    cursor: pointer;
+}
+
+input:focus {
+    color: red;
+}
