@@ -2,100 +2,85 @@ html {
     font-size: 10px;
 }
 
-.body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+body {
     overflow: hidden;
 }
 
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: auto auto;
-    max-width: 95vw;
-    height: 95vh;
+    max-width: 1280px;
+    height: 100vh;
     background-color: black;
     border: solid 5px lightgrey;
     border-radius: 5px;
+    padding: 15px;
+}
+
+input {
+    display: none;
+ }
+
+.slider-wrapper {
+    width: 82%;
+    height: 75%;
+    overflow: hidden;
 }
 
 .slider {
-    display: flex;
-    width: 100%;
-    height: 70%;
-    margin: 5vh;
+    display: inline-flex;
+    gap: 50px;
+    margin: 0 40px;
+    transition: all 1s;
+}
+
+.slide {
+    width: 1000px;
+    height: 750px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .slide.c1 {
     background-image: url(./assets/Corvette-C1-1962.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c2 {
     background-image: url(./assets/Corvette-C2-Coupe.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c3 {
     background-image: url(./assets/Corvette-C3-Coupe.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c4 {
     background-image: url(./assets/Corvette-C4-Cabrio.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c5 {
     background-image: url(./assets/Corvette-C5-Coupe.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c6 {
     background-image: url(./assets/Corvette-C6-Coupe.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c7 {
     background-image: url(./assets/Corvette-C7.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .slide.c8 {
     background-image: url(./assets/Corvette-C8.jpg);
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    background-size: cover;
 }
 
 .footer {
     display: flex;
+    width: 80%;
     justify-content: space-between;
 }
 
@@ -106,11 +91,12 @@ html {
 .text {
     color: white;
     font-size: 0;
+    transition: all 1s;
 }
 
-.text.active {
+/* .text.active {
     font-size: 2rem;
-}
+} */
 
 .switchers {
     display: flex;
@@ -118,17 +104,123 @@ html {
 
 .switcher {
     display: flex;
-    width: 30px;
-    height: 30px;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 }
 
-input {
-    cursor: pointer;
+label {
+    width: 30px;
+    height: 30px;
 }
 
-input:focus {
-    color: red;
+.label {
+    width: 10px;
+    height: 10px;
+    border: solid 0.2rem gray;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+
+.switcher:hover .label{
+    background-color: white;
+}
+
+input#c1:checked ~ .slider-wrapper .slider {
+    margin-left: 0%;
+}
+
+input#c1:checked ~ .footer .text-box .text.c1 {
+    font-size: 2rem;
+}
+
+input#c1:checked ~ .footer .switchers label[for="c1"] .label {
+    background-color: aqua;
+}
+
+input#c2:checked ~ .slider-wrapper .slider {
+    margin-left: -100%;
+}
+
+input#c2:checked ~ .footer .text-box .text.c2 {
+    font-size: 2rem;
+}
+
+input#c2:checked ~ .footer .switchers label[for="c2"] .label {
+    background-color: aqua;
+}
+
+input#c3:checked ~ .slider-wrapper .slider {
+    margin-left: -200%;
+}
+
+input#c3:checked ~ .footer .text-box .text.c3 {
+    font-size: 2rem;
+}
+
+input#c3:checked ~ .footer .switchers label[for="c3"] .label {
+    background-color: aqua;
+}
+
+input#c4:checked ~ .slider-wrapper .slider {
+    margin-left: -300%;
+}
+
+input#c4:checked ~ .footer .text-box .text.c4 {
+    font-size: 2rem;
+}
+
+input#c4:checked ~ .footer .switchers label[for="c4"] .label {
+    background-color: aqua;
+}
+
+input#c5:checked ~ .slider-wrapper .slider {
+    margin-left: -400%;
+}
+
+input#c5:checked ~ .footer .text-box .text.c5 {
+    font-size: 2rem;
+}
+
+input#c5:checked ~ .footer .switchers label[for="c5"] .label {
+    background-color: aqua;
+}
+
+input#c6:checked ~ .slider-wrapper .slider {
+    margin-left: -500%;
+}
+
+input#c6:checked ~ .footer .text-box .text.c6 {
+    font-size: 2rem;
+}
+
+input#c6:checked ~ .footer .switchers label[for="c6"] .label {
+    background-color: aqua;
+}
+
+input#c7:checked ~ .slider-wrapper .slider {
+    margin-left: -600%;
+}
+
+input#c7:checked ~ .footer .text-box .text.c7 {
+    font-size: 2rem;
+}
+
+input#c7:checked ~ .footer .switchers label[for="c7"] .label {
+    background-color: aqua;
+}
+
+input#c8:checked ~ .slider-wrapper .slider {
+    margin-left: -700%;
+}
+
+input#c8:checked ~ .footer .text-box .text.c8 {
+    font-size: 2rem;
+}
+
+input#c8:checked ~ .footer .switchers label[for="c8"] .label {
+    background-color: aqua;
 }
