@@ -8,9 +8,9 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 4vh auto 4vh;
+    margin: 1vh auto 9vh;
     width: 85vw;
-    height: 92vh;
+    height: 90vh;
     background-color: black;
     border: solid 0.4rem lightgrey;
     border-radius: 3vh;
