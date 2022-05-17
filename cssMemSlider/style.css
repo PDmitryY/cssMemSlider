@@ -8,9 +8,9 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 1vh auto 9vh;
+    margin: 1vh auto 8vh;
     width: 85vw;
-    height: 90vh;
+    height: 91vh;
     background-color: black;
     border: solid 0.4rem lightgrey;
     border-radius: 3vh;
@@ -24,7 +24,7 @@ input {
 
 .slider-wrapper {
     width: 70vw;
-    height: 70vw;
+    /* height: 100%; */
     overflow: hidden;
     border-radius: 3vh;
 }
@@ -36,7 +36,7 @@ input {
 
 .slide {
     width: 70vw;
-    height: 70vw;
+    height: 100%;
     border-radius: 3vh;
     background-repeat: no-repeat;
     background-size: contain;
@@ -125,6 +125,10 @@ label {
     transition: opacity .3s;
 }
 
+label:active .label {
+    transform: scale(1.2);
+}
+
 .switcher:hover .label{
     background-color: white;
     border-color: white;
@@ -152,6 +156,11 @@ input#c2:checked ~ .footer .text-box .text.c2 {
 }
 
 input#c2:checked ~ .footer .switchers label[for="c2"] .label {
+    background-color: aqua;
+    border-color: aqua;
+}
+
+input#c2:active ~ .footer .switchers label[for="c2"] .label {
     background-color: aqua;
     border-color: aqua;
 }
@@ -235,6 +244,11 @@ input#c8:checked ~ .footer .switchers label[for="c8"] .label {
 }
 
 @media (max-width: 768px) {
+
+    .wrapper {
+        justify-content: flex-start;
+    }
+
     .footer {
         flex-direction: column;
         justify-content: center;
@@ -248,5 +262,10 @@ input#c8:checked ~ .footer .switchers label[for="c8"] .label {
 
     .text-box {
         order: 2;
+    }
+
+    label {
+        width: 3vh;
+        height: 6vh;
     }
 }
